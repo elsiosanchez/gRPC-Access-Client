@@ -75,6 +75,23 @@ class Access {
   }
 
   /**
+   * Make login with Role, Organization and Warehouse as default values
+   * @param {string} userName User Name
+   * @param {string} userPass User Pass
+   * @param {string} language Login Language
+   * @return {Session} Session assigned
+   */
+  requestLoginDefault(userName, userPass, roleUuid, language = 'en_US') {
+    const { LoginRequest } = require('./src/grpc/proto/access_pb.js');
+    let request = new LoginRequest();
+    request.setUsername(userName);
+    request.setUserpass(userPass);
+    request.setLanguage(language);
+    request.setClientversion(this.version);
+    return this.getService().requestLoginDefault(request);
+  }
+
+  /**
    * Logout Session
    * @param {string} sessionUuid Session
    * @param {string} userPass User Pass

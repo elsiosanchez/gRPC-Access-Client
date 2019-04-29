@@ -25,8 +25,10 @@ package access;
 service AccessService {
   // Request user roles
   rpc RequestUserRoles(RoleRequest) returns (UserRoles) {}
-  // Request a Role from uuid
+  // Request login from user
   rpc RequestLogin(LoginRequest) returns (Session) {}
+  // Request login and role
+  rpc RequestLoginDefault(LoginRequest) returns (Session) {}
   // Request a Role from uuid
   rpc RequestLogout(LogoutRequest) returns (Session) {}
 }

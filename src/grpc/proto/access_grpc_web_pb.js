@@ -199,6 +199,61 @@ proto.access.AccessServicePromiseClient.prototype.requestLogin =
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.access.LoginRequest,
+ *   !proto.access.Session>}
+ */
+const methodInfo_AccessService_RequestLoginDefault = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.access.Session,
+  /** @param {!proto.access.LoginRequest} request */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Session.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.access.LoginRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.access.Session)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.access.Session>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.access.AccessServiceClient.prototype.requestLoginDefault =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/access.AccessService/RequestLoginDefault',
+      request,
+      metadata || {},
+      methodInfo_AccessService_RequestLoginDefault,
+      callback);
+};
+
+
+/**
+ * @param {!proto.access.LoginRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.access.Session>}
+ *     A native promise that resolves to the response
+ */
+proto.access.AccessServicePromiseClient.prototype.requestLoginDefault =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/access.AccessService/RequestLoginDefault',
+      request,
+      metadata || {},
+      methodInfo_AccessService_RequestLoginDefault);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.access.LogoutRequest,
  *   !proto.access.Session>}
  */

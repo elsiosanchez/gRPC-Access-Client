@@ -444,8 +444,8 @@ proto.access.LoginRequest.toObject = function(includeInstance, msg) {
     username: jspb.Message.getFieldWithDefault(msg, 2, ""),
     userpass: jspb.Message.getFieldWithDefault(msg, 3, ""),
     roleuuid: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    warehouseuuid: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    organizationuuid: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    organizationuuid: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    warehouseuuid: jspb.Message.getFieldWithDefault(msg, 6, ""),
     clientversion: jspb.Message.getFieldWithDefault(msg, 7, ""),
     language: jspb.Message.getFieldWithDefault(msg, 8, "")
   };
@@ -498,11 +498,11 @@ proto.access.LoginRequest.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
-      msg.setWarehouseuuid(value);
+      msg.setOrganizationuuid(value);
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
-      msg.setOrganizationuuid(value);
+      msg.setWarehouseuuid(value);
       break;
     case 7:
       var value = /** @type {string} */ (reader.readString());
@@ -562,14 +562,14 @@ proto.access.LoginRequest.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getWarehouseuuid();
+  f = message.getOrganizationuuid();
   if (f.length > 0) {
     writer.writeString(
       5,
       f
     );
   }
-  f = message.getOrganizationuuid();
+  f = message.getWarehouseuuid();
   if (f.length > 0) {
     writer.writeString(
       6,
@@ -639,31 +639,31 @@ proto.access.LoginRequest.prototype.setRoleuuid = function(value) {
 
 
 /**
- * optional string warehouseUuid = 5;
+ * optional string organizationUuid = 5;
  * @return {string}
  */
-proto.access.LoginRequest.prototype.getWarehouseuuid = function() {
+proto.access.LoginRequest.prototype.getOrganizationuuid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.access.LoginRequest.prototype.setWarehouseuuid = function(value) {
+proto.access.LoginRequest.prototype.setOrganizationuuid = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
 /**
- * optional string organizationUuid = 6;
+ * optional string warehouseUuid = 6;
  * @return {string}
  */
-proto.access.LoginRequest.prototype.getOrganizationuuid = function() {
+proto.access.LoginRequest.prototype.getWarehouseuuid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.access.LoginRequest.prototype.setOrganizationuuid = function(value) {
+proto.access.LoginRequest.prototype.setWarehouseuuid = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
