@@ -89,55 +89,55 @@ proto.access.AccessServicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.access.RoleRequest,
- *   !proto.access.UserRoles>}
+ *   !proto.access.LoginRequest,
+ *   !proto.access.UserInfo>}
  */
-const methodInfo_AccessService_RequestUserRoles = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.access.UserRoles,
-  /** @param {!proto.access.RoleRequest} request */
+const methodInfo_AccessService_RequestUserInfo = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.access.UserInfo,
+  /** @param {!proto.access.LoginRequest} request */
   function(request) {
     return request.serializeBinary();
   },
-  proto.access.UserRoles.deserializeBinary
+  proto.access.UserInfo.deserializeBinary
 );
 
 
 /**
- * @param {!proto.access.RoleRequest} request The
+ * @param {!proto.access.LoginRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.access.UserRoles)}
+ * @param {function(?grpc.web.Error, ?proto.access.UserInfo)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.access.UserRoles>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.access.UserInfo>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.requestUserRoles =
+proto.access.AccessServiceClient.prototype.requestUserInfo =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/RequestUserRoles',
+      '/access.AccessService/RequestUserInfo',
       request,
       metadata || {},
-      methodInfo_AccessService_RequestUserRoles,
+      methodInfo_AccessService_RequestUserInfo,
       callback);
 };
 
 
 /**
- * @param {!proto.access.RoleRequest} request The
+ * @param {!proto.access.LoginRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.access.UserRoles>}
+ * @return {!Promise<!proto.access.UserInfo>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.requestUserRoles =
+proto.access.AccessServicePromiseClient.prototype.requestUserInfo =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/RequestUserRoles',
+      '/access.AccessService/RequestUserInfo',
       request,
       metadata || {},
-      methodInfo_AccessService_RequestUserRoles);
+      methodInfo_AccessService_RequestUserInfo);
 };
 
 
@@ -303,6 +303,61 @@ proto.access.AccessServicePromiseClient.prototype.requestLogout =
       request,
       metadata || {},
       methodInfo_AccessService_RequestLogout);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.access.UserInfoRequest,
+ *   !proto.access.UserInfo>}
+ */
+const methodInfo_AccessService_RequestUserInfoFromSession = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.access.UserInfo,
+  /** @param {!proto.access.UserInfoRequest} request */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.UserInfo.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.access.UserInfoRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.access.UserInfo)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.access.UserInfo>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.access.AccessServiceClient.prototype.requestUserInfoFromSession =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/access.AccessService/RequestUserInfoFromSession',
+      request,
+      metadata || {},
+      methodInfo_AccessService_RequestUserInfoFromSession,
+      callback);
+};
+
+
+/**
+ * @param {!proto.access.UserInfoRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.access.UserInfo>}
+ *     A native promise that resolves to the response
+ */
+proto.access.AccessServicePromiseClient.prototype.requestUserInfoFromSession =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/access.AccessService/RequestUserInfoFromSession',
+      request,
+      metadata || {},
+      methodInfo_AccessService_RequestUserInfoFromSession);
 };
 
 

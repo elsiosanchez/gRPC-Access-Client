@@ -44,13 +44,26 @@ class Access {
    * @param {string} userPass User Pass
    * @return {UserRoles} Roles Assigned to User
    */
-  requestUserRoles(userName, userPass) {
-    const { RoleRequest } = require('./src/grpc/proto/access_pb.js');
-    let request = new RoleRequest();
+  requestUserInfo(userName, userPass) {
+    const { LoginRequest } = require('./src/grpc/proto/access_pb.js');
+    let request = new LoginRequest();
     request.setUsername(userName);
     request.setUserpass(userPass);
     request.setClientversion(this.version);
-    return this.getService().requestUserRoles(request);
+    return this.getService().requestUserInfo(request);
+  }
+
+  /**
+   * User Info
+   * @param {string} sessionUuid Session
+   * @return {UserInfoValue} User Info Value
+   */
+  requestUserInfoFromSession(sessionUuid) {
+    const { UserInfoRequest } = require('./src/grpc/proto/access_pb.js');
+    let request = new UserInfoRequest();
+    request.setSessionuuid(sessionUuid);
+    request.setClientversion(this.version);
+    return this.getService().requestUserInfoFromSession(request);
   }
 
   /**
@@ -94,8 +107,6 @@ class Access {
   /**
    * Logout Session
    * @param {string} sessionUuid Session
-   * @param {string} userPass User Pass
-   * @param {string} language Login Language
    * @return {Session} Session Logout
    */
   requestLogout(sessionUuid) {
