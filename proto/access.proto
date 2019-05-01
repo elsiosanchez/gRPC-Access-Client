@@ -24,7 +24,7 @@ package access;
 // The greeting service definition.
 service AccessService {
   // Request user roles
-  rpc RequestUserInfo(LoginRequest) returns (UserInfo) {}
+  rpc RequestUserInfo(LoginRequest) returns (UserInfoValue) {}
   // Request login from user
   rpc RequestLogin(LoginRequest) returns (Session) {}
   // Request login and role
@@ -32,7 +32,7 @@ service AccessService {
   // Request a Role from uuid
   rpc RequestLogout(LogoutRequest) returns (Session) {}
   // Request user roles from Session
-  rpc RequestUserInfoFromSession(UserInfoRequest) returns (UserInfo) {}
+  rpc RequestUserInfoFromSession(UserInfoRequest) returns (UserInfoValue) {}
 }
 
 // Request a Login Session
@@ -59,9 +59,11 @@ message UserInfoRequest {
 }
 
 // Role list from user
-message UserInfo {
-	string uuid = 1;
-	repeated Role roles = 2;
+message UserInfoValue {
+	string name = 1;
+	string description = 2;
+	string comments = 3;
+	repeated Role roles = 4;
 }
 
 // Session

@@ -90,15 +90,15 @@ proto.access.AccessServicePromiseClient =
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.access.LoginRequest,
- *   !proto.access.UserInfo>}
+ *   !proto.access.UserInfoValue>}
  */
 const methodInfo_AccessService_RequestUserInfo = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.access.UserInfo,
+  proto.access.UserInfoValue,
   /** @param {!proto.access.LoginRequest} request */
   function(request) {
     return request.serializeBinary();
   },
-  proto.access.UserInfo.deserializeBinary
+  proto.access.UserInfoValue.deserializeBinary
 );
 
 
@@ -107,9 +107,9 @@ const methodInfo_AccessService_RequestUserInfo = new grpc.web.AbstractClientBase
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.access.UserInfo)}
+ * @param {function(?grpc.web.Error, ?proto.access.UserInfoValue)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.access.UserInfo>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.access.UserInfoValue>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.access.AccessServiceClient.prototype.requestUserInfo =
@@ -128,7 +128,7 @@ proto.access.AccessServiceClient.prototype.requestUserInfo =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.access.UserInfo>}
+ * @return {!Promise<!proto.access.UserInfoValue>}
  *     A native promise that resolves to the response
  */
 proto.access.AccessServicePromiseClient.prototype.requestUserInfo =
@@ -310,15 +310,15 @@ proto.access.AccessServicePromiseClient.prototype.requestLogout =
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.access.UserInfoRequest,
- *   !proto.access.UserInfo>}
+ *   !proto.access.UserInfoValue>}
  */
 const methodInfo_AccessService_RequestUserInfoFromSession = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.access.UserInfo,
+  proto.access.UserInfoValue,
   /** @param {!proto.access.UserInfoRequest} request */
   function(request) {
     return request.serializeBinary();
   },
-  proto.access.UserInfo.deserializeBinary
+  proto.access.UserInfoValue.deserializeBinary
 );
 
 
@@ -327,9 +327,9 @@ const methodInfo_AccessService_RequestUserInfoFromSession = new grpc.web.Abstrac
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.access.UserInfo)}
+ * @param {function(?grpc.web.Error, ?proto.access.UserInfoValue)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.access.UserInfo>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.access.UserInfoValue>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.access.AccessServiceClient.prototype.requestUserInfoFromSession =
@@ -348,7 +348,7 @@ proto.access.AccessServiceClient.prototype.requestUserInfoFromSession =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.access.UserInfo>}
+ * @return {!Promise<!proto.access.UserInfoValue>}
  *     A native promise that resolves to the response
  */
 proto.access.AccessServicePromiseClient.prototype.requestUserInfoFromSession =
