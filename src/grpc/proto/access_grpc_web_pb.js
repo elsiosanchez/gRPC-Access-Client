@@ -361,5 +361,60 @@ proto.access.AccessServicePromiseClient.prototype.requestUserInfoFromSession =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.access.UserInfoRequest,
+ *   !proto.access.Menu>}
+ */
+const methodInfo_AccessService_RequestMenuAndChild = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.access.Menu,
+  /** @param {!proto.access.UserInfoRequest} request */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Menu.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.access.UserInfoRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.access.Menu)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.access.Menu>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.access.AccessServiceClient.prototype.requestMenuAndChild =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/access.AccessService/RequestMenuAndChild',
+      request,
+      metadata || {},
+      methodInfo_AccessService_RequestMenuAndChild,
+      callback);
+};
+
+
+/**
+ * @param {!proto.access.UserInfoRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.access.Menu>}
+ *     A native promise that resolves to the response
+ */
+proto.access.AccessServicePromiseClient.prototype.requestMenuAndChild =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/access.AccessService/RequestMenuAndChild',
+      request,
+      metadata || {},
+      methodInfo_AccessService_RequestMenuAndChild);
+};
+
+
 module.exports = proto.access;
 

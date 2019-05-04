@@ -21,9 +21,10 @@ class Access {
    * @param {string} version
    * @param {string} language
    */
-  constructor(host, version) {
+  constructor(host, version, language = 'en_US') {
     this.host = host;
     this.version = version;
+    this.language = language;
   }
 
   /**
@@ -50,6 +51,7 @@ class Access {
     request.setUsername(userName);
     request.setUserpass(userPass);
     request.setClientversion(this.version);
+    request.setLanguage(this.language);
     return this.getService().requestUserInfo(request);
   }
 
@@ -63,6 +65,7 @@ class Access {
     let request = new UserInfoRequest();
     request.setSessionuuid(sessionUuid);
     request.setClientversion(this.version);
+    request.setLanguage(this.language);
     return this.getService().requestUserInfoFromSession(request);
   }
 
@@ -115,6 +118,20 @@ class Access {
     request.setSessionuuid(sessionUuid);
     request.setClientversion(this.version);
     return this.getService().requestLogout(request);
+  }
+
+  /**
+   * get User Menu
+   * @param {string} sessionUuid Session
+   * @return {UserInfoValue} User Info Value
+   */
+  requestUserMenuFromSession(sessionUuid) {
+    const { UserInfoRequest } = require('./src/grpc/proto/access_pb.js');
+    let request = new UserInfoRequest();
+    request.setSessionuuid(sessionUuid);
+    request.setClientversion(this.version);
+    request.setLanguage(this.language);
+    return this.getService().requestMenuAndChild(request);
   }
 }
 
