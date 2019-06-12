@@ -133,6 +133,23 @@ class Access {
     request.setLanguage(this.language);
     return this.getService().requestMenuAndChild(request);
   }
+
+  /**
+   * Role Change
+   * @param {object} attributes Session
+   */
+  requestChangeRole(attributes) {
+    const { ChangeRoleRequest } = require('./src/grpc/proto/access_pb.js');
+    let request = new ChangeRoleRequest();
+
+    request.setSessionuuid(attributes.sessionUuid);
+    request.setRoleuuid(attributes.roleUuid);
+    request.setOrganizationuuid(attributes.organizationUuid);
+    request.setWarehouseuuid(attributes.warehouseUuid);
+    request.setClientversion(this.version);
+    request.setLanguage(this.language);
+    return this.getService().RrquestChangeRole(request);
+  }
 }
 
 module.exports = Access;
