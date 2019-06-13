@@ -78,12 +78,13 @@ class Access {
    * @param {string} warehouseUuid Warehouse
    * @return {Session} Session assigned
    */
-  requestLogin(userName, userPass, roleUuid, organizationUuid, language = 'en_US', warehouseUuid = null) {
+  requestLogin(userName, userPass, roleUuid, organizationUuid = null, language = 'en_US', warehouseUuid = null) {
     const { LoginRequest } = require('./src/grpc/proto/access_pb.js');
     let request = new LoginRequest();
     request.setUsername(userName);
     request.setUserpass(userPass);
-    request.setOrganizationuuid(userPass);
+    request.setRoleuuid(roleUuid);
+    request.setOrganizationuuid(organizationUuid);
     request.setLanguage(language);
     request.setWarehouseuuid(warehouseUuid);
     request.setClientversion(this.version);
@@ -97,7 +98,7 @@ class Access {
    * @param {string} language Login Language
    * @return {Session} Session assigned
    */
-  requestLoginDefault(userName, userPass, roleUuid, language = 'en_US') {
+  requestLoginDefault(userName, userPass, language = 'en_US') {
     const { LoginRequest } = require('./src/grpc/proto/access_pb.js');
     let request = new LoginRequest();
     request.setUsername(userName);
@@ -132,6 +133,23 @@ class Access {
     request.setClientversion(this.version);
     request.setLanguage(this.language);
     return this.getService().requestMenuAndChild(request);
+  }
+
+  /**
+   * Role Change
+   * @param {object} attributes Session
+   */
+  requestChangeRole(attributes) {
+    const { ChangeRoleRequest } = require('./src/grpc/proto/access_pb.js');
+    let request = new ChangeRoleRequest();
+
+    request.setSessionuuid(attributes.sessionUuid);
+    request.setRoleuuid(attributes.roleUuid);
+    request.setOrganizationuuid(attributes.organizationUuid);
+    request.setWarehouseuuid(attributes.warehouseUuid);
+    request.setClientversion(this.version);
+    request.setLanguage(this.language);
+    return this.getService().RrquestChangeRole(request);
   }
 }
 
