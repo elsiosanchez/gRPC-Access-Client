@@ -138,6 +138,10 @@ class Access {
   /**
    * Role Change
    * @param {object} attributes Session
+   * @param {string} attributes.sessionUuid
+   * @param {string} attributes.roleUuid
+   * @param {string} attributes.organizationUuid
+   * @param {string} attributes.warehouseUuid
    */
   requestChangeRole(attributes) {
     const { ChangeRoleRequest } = require('./src/grpc/proto/access_pb.js');
@@ -149,7 +153,7 @@ class Access {
     request.setWarehouseuuid(attributes.warehouseUuid);
     request.setClientversion(this.version);
     request.setLanguage(this.language);
-    return this.getService().RrquestChangeRole(request);
+    return this.getService().requestChangeRole(request);
   }
 }
 
