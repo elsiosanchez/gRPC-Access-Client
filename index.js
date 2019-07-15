@@ -52,7 +52,7 @@ class Access {
     request.setUserpass(userPass);
     request.setClientversion(this.version);
     request.setLanguage(this.language);
-    return this.getService().requestUserInfo(request);
+    return this.getService().getUserInfo(request);
   }
 
   /**
@@ -66,7 +66,7 @@ class Access {
     request.setSessionuuid(sessionUuid);
     request.setClientversion(this.version);
     request.setLanguage(this.language);
-    return this.getService().requestUserInfoFromSession(request);
+    return this.getService().getUserInfoFromSession(request);
   }
 
   /**
@@ -88,7 +88,7 @@ class Access {
     request.setLanguage(language);
     request.setWarehouseuuid(warehouseUuid);
     request.setClientversion(this.version);
-    return this.getService().requestLogin(request);
+    return this.getService().runLogin(request);
   }
 
   /**
@@ -105,7 +105,7 @@ class Access {
     request.setUserpass(userPass);
     request.setLanguage(language);
     request.setClientversion(this.version);
-    return this.getService().requestLoginDefault(request);
+    return this.getService().runLoginDefault(request);
   }
 
   /**
@@ -118,7 +118,7 @@ class Access {
     let request = new LogoutRequest();
     request.setSessionuuid(sessionUuid);
     request.setClientversion(this.version);
-    return this.getService().requestLogout(request);
+    return this.getService().runLogout(request);
   }
 
   /**
@@ -132,7 +132,7 @@ class Access {
     request.setSessionuuid(sessionUuid);
     request.setClientversion(this.version);
     request.setLanguage(this.language);
-    return this.getService().requestMenuAndChild(request);
+    return this.getService().getMenuAndChild(request);
   }
 
   /**
@@ -153,7 +153,7 @@ class Access {
     request.setWarehouseuuid(attributes.warehouseUuid);
     request.setClientversion(this.version);
     request.setLanguage(this.language);
-    return this.getService().requestChangeRole(request);
+    return this.getService().runChangeRole(request);
   }
 }
 
