@@ -1737,7 +1737,7 @@ proto.access.Session.toObject = function(includeInstance, msg) {
     userinfo: (f = msg.getUserinfo()) && proto.access.UserInfo.toObject(includeInstance, f),
     role: (f = msg.getRole()) && proto.access.Role.toObject(includeInstance, f),
     processed: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
-    defailtcontextMap: (f = msg.getDefailtcontextMap()) ? f.toObject(includeInstance, proto.access.ContextValue.toObject) : []
+    defaultcontextMap: (f = msg.getDefaultcontextMap()) ? f.toObject(includeInstance, proto.access.ContextValue.toObject) : []
   };
 
   if (includeInstance) {
@@ -1801,7 +1801,7 @@ proto.access.Session.deserializeBinaryFromReader = function(msg, reader) {
       msg.setProcessed(value);
       break;
     case 7:
-      var value = msg.getDefailtcontextMap();
+      var value = msg.getDefaultcontextMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.access.ContextValue.deserializeBinaryFromReader, "");
          });
@@ -1879,7 +1879,7 @@ proto.access.Session.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getDefailtcontextMap(true);
+  f = message.getDefaultcontextMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.access.ContextValue.serializeBinaryToWriter);
   }
@@ -2013,12 +2013,12 @@ proto.access.Session.prototype.setProcessed = function(value) {
 
 
 /**
- * map<string, ContextValue> defailtContext = 7;
+ * map<string, ContextValue> defaultContext = 7;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,!proto.access.ContextValue>}
  */
-proto.access.Session.prototype.getDefailtcontextMap = function(opt_noLazyCreate) {
+proto.access.Session.prototype.getDefaultcontextMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!proto.access.ContextValue>} */ (
       jspb.Message.getMapField(this, 7, opt_noLazyCreate,
       proto.access.ContextValue));
@@ -2028,8 +2028,8 @@ proto.access.Session.prototype.getDefailtcontextMap = function(opt_noLazyCreate)
 /**
  * Clears values from the map. The map will be non-null.
  */
-proto.access.Session.prototype.clearDefailtcontextMap = function() {
-  this.getDefailtcontextMap().clear();
+proto.access.Session.prototype.clearDefaultcontextMap = function() {
+  this.getDefaultcontextMap().clear();
 };
 
 
