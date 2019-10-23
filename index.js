@@ -122,6 +122,19 @@ class Access {
   }
 
   /**
+   * Get Session
+   * @param {string} sessionUuid Session
+   * @return {Session} Session getted
+   */
+  getSession(sessionUuid) {
+    const { SessionRequest } = require('./src/grpc/proto/access_pb.js');
+    let request = new SessionRequest();
+    request.setSessionuuid(sessionUuid);
+    request.setClientversion(this.version);
+    return this.getService().getSession(request);
+  }
+
+  /**
    * get User Menu
    * @param {string} sessionUuid Session
    * @return {UserInfoValue} User Info Value

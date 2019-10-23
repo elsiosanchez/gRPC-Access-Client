@@ -471,5 +471,60 @@ proto.access.AccessServicePromiseClient.prototype.runChangeRole =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.access.SessionRequest,
+ *   !proto.access.Session>}
+ */
+const methodInfo_AccessService_GetSession = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.access.Session,
+  /** @param {!proto.access.SessionRequest} request */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Session.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.access.SessionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.access.Session)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.access.Session>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.access.AccessServiceClient.prototype.getSession =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/access.AccessService/GetSession',
+      request,
+      metadata || {},
+      methodInfo_AccessService_GetSession,
+      callback);
+};
+
+
+/**
+ * @param {!proto.access.SessionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.access.Session>}
+ *     A native promise that resolves to the response
+ */
+proto.access.AccessServicePromiseClient.prototype.getSession =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/access.AccessService/GetSession',
+      request,
+      metadata || {},
+      methodInfo_AccessService_GetSession);
+};
+
+
 module.exports = proto.access;
 
