@@ -1,7 +1,7 @@
 {
   "name": "@adempiere/grpc-access-client",
   "version": "1.1.4",
-  "description": "ADempiere Data Client write in Javascript for gRPC service",
+  "description": "ADempiere Access Client write in Javascript for gRPC service",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
