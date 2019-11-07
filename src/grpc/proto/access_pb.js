@@ -2385,12 +2385,13 @@ proto.access.ContextValue.serializeBinaryToWriter = function(message, writer) {
  * @enum {number}
  */
 proto.access.ContextValue.ValueType = {
-  INTEGER: 0,
-  LONG: 1,
-  DOUBLE: 2,
-  BOOLEAN: 3,
-  STRING: 4,
-  DATE: 5
+  NULL: 0,
+  INTEGER: 1,
+  LONG: 2,
+  DOUBLE: 3,
+  BOOLEAN: 4,
+  STRING: 5,
+  DATE: 6
 };
 
 /**
