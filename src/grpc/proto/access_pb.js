@@ -1726,9 +1726,11 @@ proto.access.UserInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.access.UserInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    description: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    comments: jspb.Message.getFieldWithDefault(msg, 3, "")
+    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    uuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    description: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    comments: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -1766,14 +1768,22 @@ proto.access.UserInfo.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setId(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDescription(value);
+      msg.setUuid(value);
       break;
     case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.setComments(value);
       break;
@@ -1806,24 +1816,38 @@ proto.access.UserInfo.prototype.serializeBinary = function() {
  */
 proto.access.UserInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getId();
+  if (f !== 0) {
+    writer.writeInt32(
       1,
       f
     );
   }
-  f = message.getDescription();
+  f = message.getUuid();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getComments();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getComments();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
       f
     );
   }
@@ -1831,47 +1855,77 @@ proto.access.UserInfo.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional string name = 1;
- * @return {string}
+ * optional int32 id = 1;
+ * @return {number}
  */
-proto.access.UserInfo.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.access.UserInfo.prototype.getId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
-/** @param {string} value */
-proto.access.UserInfo.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+/** @param {number} value */
+proto.access.UserInfo.prototype.setId = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
 /**
- * optional string description = 2;
+ * optional string uuid = 2;
  * @return {string}
  */
-proto.access.UserInfo.prototype.getDescription = function() {
+proto.access.UserInfo.prototype.getUuid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.access.UserInfo.prototype.setDescription = function(value) {
+proto.access.UserInfo.prototype.setUuid = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string comments = 3;
+ * optional string name = 3;
  * @return {string}
  */
-proto.access.UserInfo.prototype.getComments = function() {
+proto.access.UserInfo.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.access.UserInfo.prototype.setComments = function(value) {
+proto.access.UserInfo.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string description = 4;
+ * @return {string}
+ */
+proto.access.UserInfo.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.access.UserInfo.prototype.setDescription = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string comments = 5;
+ * @return {string}
+ */
+proto.access.UserInfo.prototype.getComments = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.access.UserInfo.prototype.setComments = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
