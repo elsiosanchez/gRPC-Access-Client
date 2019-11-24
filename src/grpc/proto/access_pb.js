@@ -2544,7 +2544,7 @@ proto.access.ContextValue.prototype.setValuetype = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.access.Role.repeatedFields_ = [7,8,9,10,11,12,13,14,15,16,17,18];
+proto.access.Role.repeatedFields_ = [11,12,13,14,15,16,17,18,19,20,21,22];
 
 
 
@@ -2583,6 +2583,10 @@ proto.access.Role.toObject = function(includeInstance, msg) {
     description: jspb.Message.getFieldWithDefault(msg, 4, ""),
     clientid: jspb.Message.getFieldWithDefault(msg, 5, 0),
     clientname: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    iscanreport: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
+    iscanexport: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+    ispersonallock: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
+    ispersonalaccess: jspb.Message.getBooleanFieldWithDefault(msg, 10, false),
     organizationsList: jspb.Message.toObjectList(msg.getOrganizationsList(),
     proto.access.Access.toObject, includeInstance),
     windowsList: jspb.Message.toObjectList(msg.getWindowsList(),
@@ -2668,61 +2672,77 @@ proto.access.Role.deserializeBinaryFromReader = function(msg, reader) {
       msg.setClientname(value);
       break;
     case 7:
-      var value = new proto.access.Access;
-      reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addOrganizations(value);
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIscanreport(value);
       break;
     case 8:
-      var value = new proto.access.Access;
-      reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addWindows(value);
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIscanexport(value);
       break;
     case 9:
-      var value = new proto.access.Access;
-      reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addProcess(value);
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIspersonallock(value);
       break;
     case 10:
-      var value = new proto.access.Access;
-      reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addForms(value);
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIspersonalaccess(value);
       break;
     case 11:
       var value = new proto.access.Access;
       reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addBrowsers(value);
+      msg.addOrganizations(value);
       break;
     case 12:
       var value = new proto.access.Access;
       reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addWorkflows(value);
+      msg.addWindows(value);
       break;
     case 13:
       var value = new proto.access.Access;
       reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addTasks(value);
+      msg.addProcess(value);
       break;
     case 14:
       var value = new proto.access.Access;
       reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addDashboards(value);
+      msg.addForms(value);
       break;
     case 15:
       var value = new proto.access.Access;
       reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
-      msg.addDocumentactions(value);
+      msg.addBrowsers(value);
       break;
     case 16:
+      var value = new proto.access.Access;
+      reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
+      msg.addWorkflows(value);
+      break;
+    case 17:
+      var value = new proto.access.Access;
+      reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
+      msg.addTasks(value);
+      break;
+    case 18:
+      var value = new proto.access.Access;
+      reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
+      msg.addDashboards(value);
+      break;
+    case 19:
+      var value = new proto.access.Access;
+      reader.readMessage(value,proto.access.Access.deserializeBinaryFromReader);
+      msg.addDocumentactions(value);
+      break;
+    case 20:
       var value = new proto.access.TableAccess;
       reader.readMessage(value,proto.access.TableAccess.deserializeBinaryFromReader);
       msg.addTables(value);
       break;
-    case 17:
+    case 21:
       var value = new proto.access.ColumnAccess;
       reader.readMessage(value,proto.access.ColumnAccess.deserializeBinaryFromReader);
       msg.addColumns(value);
       break;
-    case 18:
+    case 22:
       var value = new proto.access.RecordAccess;
       reader.readMessage(value,proto.access.RecordAccess.deserializeBinaryFromReader);
       msg.addRecords(value);
@@ -2798,39 +2818,35 @@ proto.access.Role.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getOrganizationsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getIscanreport();
+  if (f) {
+    writer.writeBool(
       7,
-      f,
-      proto.access.Access.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getWindowsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getIscanexport();
+  if (f) {
+    writer.writeBool(
       8,
-      f,
-      proto.access.Access.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getProcessList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getIspersonallock();
+  if (f) {
+    writer.writeBool(
       9,
-      f,
-      proto.access.Access.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getFormsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getIspersonalaccess();
+  if (f) {
+    writer.writeBool(
       10,
-      f,
-      proto.access.Access.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getBrowsersList();
+  f = message.getOrganizationsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       11,
@@ -2838,7 +2854,7 @@ proto.access.Role.serializeBinaryToWriter = function(message, writer) {
       proto.access.Access.serializeBinaryToWriter
     );
   }
-  f = message.getWorkflowsList();
+  f = message.getWindowsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       12,
@@ -2846,7 +2862,7 @@ proto.access.Role.serializeBinaryToWriter = function(message, writer) {
       proto.access.Access.serializeBinaryToWriter
     );
   }
-  f = message.getTasksList();
+  f = message.getProcessList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       13,
@@ -2854,7 +2870,7 @@ proto.access.Role.serializeBinaryToWriter = function(message, writer) {
       proto.access.Access.serializeBinaryToWriter
     );
   }
-  f = message.getDashboardsList();
+  f = message.getFormsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       14,
@@ -2862,7 +2878,7 @@ proto.access.Role.serializeBinaryToWriter = function(message, writer) {
       proto.access.Access.serializeBinaryToWriter
     );
   }
-  f = message.getDocumentactionsList();
+  f = message.getBrowsersList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       15,
@@ -2870,10 +2886,42 @@ proto.access.Role.serializeBinaryToWriter = function(message, writer) {
       proto.access.Access.serializeBinaryToWriter
     );
   }
-  f = message.getTablesList();
+  f = message.getWorkflowsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       16,
+      f,
+      proto.access.Access.serializeBinaryToWriter
+    );
+  }
+  f = message.getTasksList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      17,
+      f,
+      proto.access.Access.serializeBinaryToWriter
+    );
+  }
+  f = message.getDashboardsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      18,
+      f,
+      proto.access.Access.serializeBinaryToWriter
+    );
+  }
+  f = message.getDocumentactionsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      19,
+      f,
+      proto.access.Access.serializeBinaryToWriter
+    );
+  }
+  f = message.getTablesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      20,
       f,
       proto.access.TableAccess.serializeBinaryToWriter
     );
@@ -2881,7 +2929,7 @@ proto.access.Role.serializeBinaryToWriter = function(message, writer) {
   f = message.getColumnsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      17,
+      21,
       f,
       proto.access.ColumnAccess.serializeBinaryToWriter
     );
@@ -2889,7 +2937,7 @@ proto.access.Role.serializeBinaryToWriter = function(message, writer) {
   f = message.getRecordsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      18,
+      22,
       f,
       proto.access.RecordAccess.serializeBinaryToWriter
     );
@@ -2988,18 +3036,78 @@ proto.access.Role.prototype.setClientname = function(value) {
 
 
 /**
- * repeated Access organizations = 7;
+ * optional bool isCanReport = 7;
+ * @return {boolean}
+ */
+proto.access.Role.prototype.getIscanreport = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/** @param {boolean} value */
+proto.access.Role.prototype.setIscanreport = function(value) {
+  jspb.Message.setProto3BooleanField(this, 7, value);
+};
+
+
+/**
+ * optional bool isCanExport = 8;
+ * @return {boolean}
+ */
+proto.access.Role.prototype.getIscanexport = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/** @param {boolean} value */
+proto.access.Role.prototype.setIscanexport = function(value) {
+  jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * optional bool isPersonalLock = 9;
+ * @return {boolean}
+ */
+proto.access.Role.prototype.getIspersonallock = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 9, false));
+};
+
+
+/** @param {boolean} value */
+proto.access.Role.prototype.setIspersonallock = function(value) {
+  jspb.Message.setProto3BooleanField(this, 9, value);
+};
+
+
+/**
+ * optional bool isPersonalAccess = 10;
+ * @return {boolean}
+ */
+proto.access.Role.prototype.getIspersonalaccess = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 10, false));
+};
+
+
+/** @param {boolean} value */
+proto.access.Role.prototype.setIspersonalaccess = function(value) {
+  jspb.Message.setProto3BooleanField(this, 10, value);
+};
+
+
+/**
+ * repeated Access organizations = 11;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getOrganizationsList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 7));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 11));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setOrganizationsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 7, value);
+  jspb.Message.setRepeatedWrapperField(this, 11, value);
 };
 
 
@@ -3009,7 +3117,7 @@ proto.access.Role.prototype.setOrganizationsList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addOrganizations = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 11, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3022,18 +3130,18 @@ proto.access.Role.prototype.clearOrganizationsList = function() {
 
 
 /**
- * repeated Access windows = 8;
+ * repeated Access windows = 12;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getWindowsList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 8));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 12));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setWindowsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 8, value);
+  jspb.Message.setRepeatedWrapperField(this, 12, value);
 };
 
 
@@ -3043,7 +3151,7 @@ proto.access.Role.prototype.setWindowsList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addWindows = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 12, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3056,18 +3164,18 @@ proto.access.Role.prototype.clearWindowsList = function() {
 
 
 /**
- * repeated Access process = 9;
+ * repeated Access process = 13;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getProcessList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 9));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 13));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setProcessList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 9, value);
+  jspb.Message.setRepeatedWrapperField(this, 13, value);
 };
 
 
@@ -3077,7 +3185,7 @@ proto.access.Role.prototype.setProcessList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addProcess = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 13, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3090,18 +3198,18 @@ proto.access.Role.prototype.clearProcessList = function() {
 
 
 /**
- * repeated Access forms = 10;
+ * repeated Access forms = 14;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getFormsList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 10));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 14));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setFormsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 10, value);
+  jspb.Message.setRepeatedWrapperField(this, 14, value);
 };
 
 
@@ -3111,7 +3219,7 @@ proto.access.Role.prototype.setFormsList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addForms = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 14, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3124,18 +3232,18 @@ proto.access.Role.prototype.clearFormsList = function() {
 
 
 /**
- * repeated Access browsers = 11;
+ * repeated Access browsers = 15;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getBrowsersList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 11));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 15));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setBrowsersList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 11, value);
+  jspb.Message.setRepeatedWrapperField(this, 15, value);
 };
 
 
@@ -3145,7 +3253,7 @@ proto.access.Role.prototype.setBrowsersList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addBrowsers = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 11, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3158,18 +3266,18 @@ proto.access.Role.prototype.clearBrowsersList = function() {
 
 
 /**
- * repeated Access workflows = 12;
+ * repeated Access workflows = 16;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getWorkflowsList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 12));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 16));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setWorkflowsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 12, value);
+  jspb.Message.setRepeatedWrapperField(this, 16, value);
 };
 
 
@@ -3179,7 +3287,7 @@ proto.access.Role.prototype.setWorkflowsList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addWorkflows = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 12, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 16, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3192,18 +3300,18 @@ proto.access.Role.prototype.clearWorkflowsList = function() {
 
 
 /**
- * repeated Access tasks = 13;
+ * repeated Access tasks = 17;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getTasksList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 13));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 17));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setTasksList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 13, value);
+  jspb.Message.setRepeatedWrapperField(this, 17, value);
 };
 
 
@@ -3213,7 +3321,7 @@ proto.access.Role.prototype.setTasksList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addTasks = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 13, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 17, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3226,18 +3334,18 @@ proto.access.Role.prototype.clearTasksList = function() {
 
 
 /**
- * repeated Access dashboards = 14;
+ * repeated Access dashboards = 18;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getDashboardsList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 14));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 18));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setDashboardsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 14, value);
+  jspb.Message.setRepeatedWrapperField(this, 18, value);
 };
 
 
@@ -3247,7 +3355,7 @@ proto.access.Role.prototype.setDashboardsList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addDashboards = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 14, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 18, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3260,18 +3368,18 @@ proto.access.Role.prototype.clearDashboardsList = function() {
 
 
 /**
- * repeated Access documentActions = 15;
+ * repeated Access documentActions = 19;
  * @return {!Array<!proto.access.Access>}
  */
 proto.access.Role.prototype.getDocumentactionsList = function() {
   return /** @type{!Array<!proto.access.Access>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 15));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.Access, 19));
 };
 
 
 /** @param {!Array<!proto.access.Access>} value */
 proto.access.Role.prototype.setDocumentactionsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 15, value);
+  jspb.Message.setRepeatedWrapperField(this, 19, value);
 };
 
 
@@ -3281,7 +3389,7 @@ proto.access.Role.prototype.setDocumentactionsList = function(value) {
  * @return {!proto.access.Access}
  */
 proto.access.Role.prototype.addDocumentactions = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.access.Access, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 19, opt_value, proto.access.Access, opt_index);
 };
 
 
@@ -3294,18 +3402,18 @@ proto.access.Role.prototype.clearDocumentactionsList = function() {
 
 
 /**
- * repeated TableAccess tables = 16;
+ * repeated TableAccess tables = 20;
  * @return {!Array<!proto.access.TableAccess>}
  */
 proto.access.Role.prototype.getTablesList = function() {
   return /** @type{!Array<!proto.access.TableAccess>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.TableAccess, 16));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.TableAccess, 20));
 };
 
 
 /** @param {!Array<!proto.access.TableAccess>} value */
 proto.access.Role.prototype.setTablesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 16, value);
+  jspb.Message.setRepeatedWrapperField(this, 20, value);
 };
 
 
@@ -3315,7 +3423,7 @@ proto.access.Role.prototype.setTablesList = function(value) {
  * @return {!proto.access.TableAccess}
  */
 proto.access.Role.prototype.addTables = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 16, opt_value, proto.access.TableAccess, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 20, opt_value, proto.access.TableAccess, opt_index);
 };
 
 
@@ -3328,18 +3436,18 @@ proto.access.Role.prototype.clearTablesList = function() {
 
 
 /**
- * repeated ColumnAccess columns = 17;
+ * repeated ColumnAccess columns = 21;
  * @return {!Array<!proto.access.ColumnAccess>}
  */
 proto.access.Role.prototype.getColumnsList = function() {
   return /** @type{!Array<!proto.access.ColumnAccess>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.ColumnAccess, 17));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.ColumnAccess, 21));
 };
 
 
 /** @param {!Array<!proto.access.ColumnAccess>} value */
 proto.access.Role.prototype.setColumnsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 17, value);
+  jspb.Message.setRepeatedWrapperField(this, 21, value);
 };
 
 
@@ -3349,7 +3457,7 @@ proto.access.Role.prototype.setColumnsList = function(value) {
  * @return {!proto.access.ColumnAccess}
  */
 proto.access.Role.prototype.addColumns = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 17, opt_value, proto.access.ColumnAccess, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 21, opt_value, proto.access.ColumnAccess, opt_index);
 };
 
 
@@ -3362,18 +3470,18 @@ proto.access.Role.prototype.clearColumnsList = function() {
 
 
 /**
- * repeated RecordAccess records = 18;
+ * repeated RecordAccess records = 22;
  * @return {!Array<!proto.access.RecordAccess>}
  */
 proto.access.Role.prototype.getRecordsList = function() {
   return /** @type{!Array<!proto.access.RecordAccess>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.access.RecordAccess, 18));
+    jspb.Message.getRepeatedWrapperField(this, proto.access.RecordAccess, 22));
 };
 
 
 /** @param {!Array<!proto.access.RecordAccess>} value */
 proto.access.Role.prototype.setRecordsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 18, value);
+  jspb.Message.setRepeatedWrapperField(this, 22, value);
 };
 
 
@@ -3383,7 +3491,7 @@ proto.access.Role.prototype.setRecordsList = function(value) {
  * @return {!proto.access.RecordAccess}
  */
 proto.access.Role.prototype.addRecords = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 18, opt_value, proto.access.RecordAccess, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 22, opt_value, proto.access.RecordAccess, opt_index);
 };
 
 
