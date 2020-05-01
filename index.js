@@ -33,8 +33,8 @@ class Access {
    */
   getService() {
     const grpc_promise = require('grpc-promise');
-    const { AccessServicePromiseClient } = require('./src/grpc/proto/access_grpc_web_pb.js');
-    const requestService = new AccessServicePromiseClient(this.host);
+    const { SecurityPromiseClient } = require('./src/grpc/proto/access_grpc_web_pb.js');
+    const requestService = new SecurityPromiseClient(this.host);
     grpc_promise.promisifyAll(requestService);
     return requestService;
   }

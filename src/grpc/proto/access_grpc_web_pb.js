@@ -22,7 +22,7 @@ proto.access = require('./access_pb.js');
  * @struct
  * @final
  */
-proto.access.AccessServiceClient =
+proto.access.SecurityClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -58,7 +58,7 @@ proto.access.AccessServiceClient =
  * @struct
  * @final
  */
-proto.access.AccessServicePromiseClient =
+proto.access.SecurityPromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -92,7 +92,7 @@ proto.access.AccessServicePromiseClient =
  *   !proto.access.LoginRequest,
  *   !proto.access.UserInfoValue>}
  */
-const methodInfo_AccessService_GetUserInfo = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Security_GetUserInfo = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.UserInfoValue,
   /** @param {!proto.access.LoginRequest} request */
   function(request) {
@@ -112,13 +112,13 @@ const methodInfo_AccessService_GetUserInfo = new grpc.web.AbstractClientBase.Met
  * @return {!grpc.web.ClientReadableStream<!proto.access.UserInfoValue>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.getUserInfo =
+proto.access.SecurityClient.prototype.getUserInfo =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/GetUserInfo',
+      '/access.Security/GetUserInfo',
       request,
       metadata || {},
-      methodInfo_AccessService_GetUserInfo,
+      methodInfo_Security_GetUserInfo,
       callback);
 };
 
@@ -131,13 +131,13 @@ proto.access.AccessServiceClient.prototype.getUserInfo =
  * @return {!Promise<!proto.access.UserInfoValue>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.getUserInfo =
+proto.access.SecurityPromiseClient.prototype.getUserInfo =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/GetUserInfo',
+      '/access.Security/GetUserInfo',
       request,
       metadata || {},
-      methodInfo_AccessService_GetUserInfo);
+      methodInfo_Security_GetUserInfo);
 };
 
 
@@ -147,7 +147,7 @@ proto.access.AccessServicePromiseClient.prototype.getUserInfo =
  *   !proto.access.LoginRequest,
  *   !proto.access.Session>}
  */
-const methodInfo_AccessService_RunLogin = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Security_RunLogin = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
   /** @param {!proto.access.LoginRequest} request */
   function(request) {
@@ -167,13 +167,13 @@ const methodInfo_AccessService_RunLogin = new grpc.web.AbstractClientBase.Method
  * @return {!grpc.web.ClientReadableStream<!proto.access.Session>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.runLogin =
+proto.access.SecurityClient.prototype.runLogin =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/RunLogin',
+      '/access.Security/RunLogin',
       request,
       metadata || {},
-      methodInfo_AccessService_RunLogin,
+      methodInfo_Security_RunLogin,
       callback);
 };
 
@@ -186,13 +186,13 @@ proto.access.AccessServiceClient.prototype.runLogin =
  * @return {!Promise<!proto.access.Session>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.runLogin =
+proto.access.SecurityPromiseClient.prototype.runLogin =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/RunLogin',
+      '/access.Security/RunLogin',
       request,
       metadata || {},
-      methodInfo_AccessService_RunLogin);
+      methodInfo_Security_RunLogin);
 };
 
 
@@ -202,7 +202,7 @@ proto.access.AccessServicePromiseClient.prototype.runLogin =
  *   !proto.access.LoginRequest,
  *   !proto.access.Session>}
  */
-const methodInfo_AccessService_RunLoginDefault = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Security_RunLoginDefault = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
   /** @param {!proto.access.LoginRequest} request */
   function(request) {
@@ -222,13 +222,13 @@ const methodInfo_AccessService_RunLoginDefault = new grpc.web.AbstractClientBase
  * @return {!grpc.web.ClientReadableStream<!proto.access.Session>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.runLoginDefault =
+proto.access.SecurityClient.prototype.runLoginDefault =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/RunLoginDefault',
+      '/access.Security/RunLoginDefault',
       request,
       metadata || {},
-      methodInfo_AccessService_RunLoginDefault,
+      methodInfo_Security_RunLoginDefault,
       callback);
 };
 
@@ -241,13 +241,13 @@ proto.access.AccessServiceClient.prototype.runLoginDefault =
  * @return {!Promise<!proto.access.Session>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.runLoginDefault =
+proto.access.SecurityPromiseClient.prototype.runLoginDefault =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/RunLoginDefault',
+      '/access.Security/RunLoginDefault',
       request,
       metadata || {},
-      methodInfo_AccessService_RunLoginDefault);
+      methodInfo_Security_RunLoginDefault);
 };
 
 
@@ -257,7 +257,7 @@ proto.access.AccessServicePromiseClient.prototype.runLoginDefault =
  *   !proto.access.LogoutRequest,
  *   !proto.access.Session>}
  */
-const methodInfo_AccessService_RunLogout = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Security_RunLogout = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
   /** @param {!proto.access.LogoutRequest} request */
   function(request) {
@@ -277,13 +277,13 @@ const methodInfo_AccessService_RunLogout = new grpc.web.AbstractClientBase.Metho
  * @return {!grpc.web.ClientReadableStream<!proto.access.Session>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.runLogout =
+proto.access.SecurityClient.prototype.runLogout =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/RunLogout',
+      '/access.Security/RunLogout',
       request,
       metadata || {},
-      methodInfo_AccessService_RunLogout,
+      methodInfo_Security_RunLogout,
       callback);
 };
 
@@ -296,13 +296,13 @@ proto.access.AccessServiceClient.prototype.runLogout =
  * @return {!Promise<!proto.access.Session>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.runLogout =
+proto.access.SecurityPromiseClient.prototype.runLogout =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/RunLogout',
+      '/access.Security/RunLogout',
       request,
       metadata || {},
-      methodInfo_AccessService_RunLogout);
+      methodInfo_Security_RunLogout);
 };
 
 
@@ -312,7 +312,7 @@ proto.access.AccessServicePromiseClient.prototype.runLogout =
  *   !proto.access.UserInfoRequest,
  *   !proto.access.UserInfoValue>}
  */
-const methodInfo_AccessService_GetUserInfoFromSession = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Security_GetUserInfoFromSession = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.UserInfoValue,
   /** @param {!proto.access.UserInfoRequest} request */
   function(request) {
@@ -332,13 +332,13 @@ const methodInfo_AccessService_GetUserInfoFromSession = new grpc.web.AbstractCli
  * @return {!grpc.web.ClientReadableStream<!proto.access.UserInfoValue>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.getUserInfoFromSession =
+proto.access.SecurityClient.prototype.getUserInfoFromSession =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/GetUserInfoFromSession',
+      '/access.Security/GetUserInfoFromSession',
       request,
       metadata || {},
-      methodInfo_AccessService_GetUserInfoFromSession,
+      methodInfo_Security_GetUserInfoFromSession,
       callback);
 };
 
@@ -351,13 +351,13 @@ proto.access.AccessServiceClient.prototype.getUserInfoFromSession =
  * @return {!Promise<!proto.access.UserInfoValue>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.getUserInfoFromSession =
+proto.access.SecurityPromiseClient.prototype.getUserInfoFromSession =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/GetUserInfoFromSession',
+      '/access.Security/GetUserInfoFromSession',
       request,
       metadata || {},
-      methodInfo_AccessService_GetUserInfoFromSession);
+      methodInfo_Security_GetUserInfoFromSession);
 };
 
 
@@ -367,7 +367,7 @@ proto.access.AccessServicePromiseClient.prototype.getUserInfoFromSession =
  *   !proto.access.UserInfoRequest,
  *   !proto.access.Menu>}
  */
-const methodInfo_AccessService_GetMenuAndChild = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Security_GetMenuAndChild = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Menu,
   /** @param {!proto.access.UserInfoRequest} request */
   function(request) {
@@ -387,13 +387,13 @@ const methodInfo_AccessService_GetMenuAndChild = new grpc.web.AbstractClientBase
  * @return {!grpc.web.ClientReadableStream<!proto.access.Menu>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.getMenuAndChild =
+proto.access.SecurityClient.prototype.getMenuAndChild =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/GetMenuAndChild',
+      '/access.Security/GetMenuAndChild',
       request,
       metadata || {},
-      methodInfo_AccessService_GetMenuAndChild,
+      methodInfo_Security_GetMenuAndChild,
       callback);
 };
 
@@ -406,13 +406,13 @@ proto.access.AccessServiceClient.prototype.getMenuAndChild =
  * @return {!Promise<!proto.access.Menu>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.getMenuAndChild =
+proto.access.SecurityPromiseClient.prototype.getMenuAndChild =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/GetMenuAndChild',
+      '/access.Security/GetMenuAndChild',
       request,
       metadata || {},
-      methodInfo_AccessService_GetMenuAndChild);
+      methodInfo_Security_GetMenuAndChild);
 };
 
 
@@ -422,7 +422,7 @@ proto.access.AccessServicePromiseClient.prototype.getMenuAndChild =
  *   !proto.access.UserInfoRequest,
  *   !proto.access.Session>}
  */
-const methodInfo_AccessService_RunChangeRole = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Security_RunChangeRole = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
   /** @param {!proto.access.UserInfoRequest} request */
   function(request) {
@@ -442,13 +442,13 @@ const methodInfo_AccessService_RunChangeRole = new grpc.web.AbstractClientBase.M
  * @return {!grpc.web.ClientReadableStream<!proto.access.Session>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.runChangeRole =
+proto.access.SecurityClient.prototype.runChangeRole =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/RunChangeRole',
+      '/access.Security/RunChangeRole',
       request,
       metadata || {},
-      methodInfo_AccessService_RunChangeRole,
+      methodInfo_Security_RunChangeRole,
       callback);
 };
 
@@ -461,13 +461,13 @@ proto.access.AccessServiceClient.prototype.runChangeRole =
  * @return {!Promise<!proto.access.Session>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.runChangeRole =
+proto.access.SecurityPromiseClient.prototype.runChangeRole =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/RunChangeRole',
+      '/access.Security/RunChangeRole',
       request,
       metadata || {},
-      methodInfo_AccessService_RunChangeRole);
+      methodInfo_Security_RunChangeRole);
 };
 
 
@@ -477,7 +477,7 @@ proto.access.AccessServicePromiseClient.prototype.runChangeRole =
  *   !proto.access.SessionRequest,
  *   !proto.access.Session>}
  */
-const methodInfo_AccessService_GetSession = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Security_GetSession = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
   /** @param {!proto.access.SessionRequest} request */
   function(request) {
@@ -497,13 +497,13 @@ const methodInfo_AccessService_GetSession = new grpc.web.AbstractClientBase.Meth
  * @return {!grpc.web.ClientReadableStream<!proto.access.Session>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.access.AccessServiceClient.prototype.getSession =
+proto.access.SecurityClient.prototype.getSession =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/access.AccessService/GetSession',
+      '/access.Security/GetSession',
       request,
       metadata || {},
-      methodInfo_AccessService_GetSession,
+      methodInfo_Security_GetSession,
       callback);
 };
 
@@ -516,13 +516,13 @@ proto.access.AccessServiceClient.prototype.getSession =
  * @return {!Promise<!proto.access.Session>}
  *     A native promise that resolves to the response
  */
-proto.access.AccessServicePromiseClient.prototype.getSession =
+proto.access.SecurityPromiseClient.prototype.getSession =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/access.AccessService/GetSession',
+      '/access.Security/GetSession',
       request,
       metadata || {},
-      methodInfo_AccessService_GetSession);
+      methodInfo_Security_GetSession);
 };
 
 
