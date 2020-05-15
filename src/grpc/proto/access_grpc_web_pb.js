@@ -37,16 +37,6 @@ proto.access.SecurityClient =
    */
   this.hostname_ = hostname;
 
-  /**
-   * @private @const {?Object} The credentials to be used to connect
-   *    to the server
-   */
-  this.credentials_ = credentials;
-
-  /**
-   * @private @const {?Object} Options for the client
-   */
-  this.options_ = options;
 };
 
 
@@ -73,17 +63,29 @@ proto.access.SecurityPromiseClient =
    */
   this.hostname_ = hostname;
 
-  /**
-   * @private @const {?Object} The credentials to be used to connect
-   *    to the server
-   */
-  this.credentials_ = credentials;
-
-  /**
-   * @private @const {?Object} Options for the client
-   */
-  this.options_ = options;
 };
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.access.LoginRequest,
+ *   !proto.access.UserInfoValue>}
+ */
+const methodDescriptor_Security_GetUserInfo = new grpc.web.MethodDescriptor(
+  '/access.Security/GetUserInfo',
+  grpc.web.MethodType.UNARY,
+  proto.access.LoginRequest,
+  proto.access.UserInfoValue,
+  /**
+   * @param {!proto.access.LoginRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.UserInfoValue.deserializeBinary
+);
 
 
 /**
@@ -94,7 +96,10 @@ proto.access.SecurityPromiseClient =
  */
 const methodInfo_Security_GetUserInfo = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.UserInfoValue,
-  /** @param {!proto.access.LoginRequest} request */
+  /**
+   * @param {!proto.access.LoginRequest} request
+   * @return {!Uint8Array}
+   */
   function(request) {
     return request.serializeBinary();
   },
@@ -118,7 +123,7 @@ proto.access.SecurityClient.prototype.getUserInfo =
       '/access.Security/GetUserInfo',
       request,
       metadata || {},
-      methodInfo_Security_GetUserInfo,
+      methodDescriptor_Security_GetUserInfo,
       callback);
 };
 
@@ -137,8 +142,30 @@ proto.access.SecurityPromiseClient.prototype.getUserInfo =
       '/access.Security/GetUserInfo',
       request,
       metadata || {},
-      methodInfo_Security_GetUserInfo);
+      methodDescriptor_Security_GetUserInfo);
 };
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.access.LoginRequest,
+ *   !proto.access.Session>}
+ */
+const methodDescriptor_Security_RunLogin = new grpc.web.MethodDescriptor(
+  '/access.Security/RunLogin',
+  grpc.web.MethodType.UNARY,
+  proto.access.LoginRequest,
+  proto.access.Session,
+  /**
+   * @param {!proto.access.LoginRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Session.deserializeBinary
+);
 
 
 /**
@@ -149,7 +176,10 @@ proto.access.SecurityPromiseClient.prototype.getUserInfo =
  */
 const methodInfo_Security_RunLogin = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
-  /** @param {!proto.access.LoginRequest} request */
+  /**
+   * @param {!proto.access.LoginRequest} request
+   * @return {!Uint8Array}
+   */
   function(request) {
     return request.serializeBinary();
   },
@@ -173,7 +203,7 @@ proto.access.SecurityClient.prototype.runLogin =
       '/access.Security/RunLogin',
       request,
       metadata || {},
-      methodInfo_Security_RunLogin,
+      methodDescriptor_Security_RunLogin,
       callback);
 };
 
@@ -192,8 +222,30 @@ proto.access.SecurityPromiseClient.prototype.runLogin =
       '/access.Security/RunLogin',
       request,
       metadata || {},
-      methodInfo_Security_RunLogin);
+      methodDescriptor_Security_RunLogin);
 };
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.access.LoginRequest,
+ *   !proto.access.Session>}
+ */
+const methodDescriptor_Security_RunLoginDefault = new grpc.web.MethodDescriptor(
+  '/access.Security/RunLoginDefault',
+  grpc.web.MethodType.UNARY,
+  proto.access.LoginRequest,
+  proto.access.Session,
+  /**
+   * @param {!proto.access.LoginRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Session.deserializeBinary
+);
 
 
 /**
@@ -204,7 +256,10 @@ proto.access.SecurityPromiseClient.prototype.runLogin =
  */
 const methodInfo_Security_RunLoginDefault = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
-  /** @param {!proto.access.LoginRequest} request */
+  /**
+   * @param {!proto.access.LoginRequest} request
+   * @return {!Uint8Array}
+   */
   function(request) {
     return request.serializeBinary();
   },
@@ -228,7 +283,7 @@ proto.access.SecurityClient.prototype.runLoginDefault =
       '/access.Security/RunLoginDefault',
       request,
       metadata || {},
-      methodInfo_Security_RunLoginDefault,
+      methodDescriptor_Security_RunLoginDefault,
       callback);
 };
 
@@ -247,8 +302,30 @@ proto.access.SecurityPromiseClient.prototype.runLoginDefault =
       '/access.Security/RunLoginDefault',
       request,
       metadata || {},
-      methodInfo_Security_RunLoginDefault);
+      methodDescriptor_Security_RunLoginDefault);
 };
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.access.LogoutRequest,
+ *   !proto.access.Session>}
+ */
+const methodDescriptor_Security_RunLogout = new grpc.web.MethodDescriptor(
+  '/access.Security/RunLogout',
+  grpc.web.MethodType.UNARY,
+  proto.access.LogoutRequest,
+  proto.access.Session,
+  /**
+   * @param {!proto.access.LogoutRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Session.deserializeBinary
+);
 
 
 /**
@@ -259,7 +336,10 @@ proto.access.SecurityPromiseClient.prototype.runLoginDefault =
  */
 const methodInfo_Security_RunLogout = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
-  /** @param {!proto.access.LogoutRequest} request */
+  /**
+   * @param {!proto.access.LogoutRequest} request
+   * @return {!Uint8Array}
+   */
   function(request) {
     return request.serializeBinary();
   },
@@ -283,7 +363,7 @@ proto.access.SecurityClient.prototype.runLogout =
       '/access.Security/RunLogout',
       request,
       metadata || {},
-      methodInfo_Security_RunLogout,
+      methodDescriptor_Security_RunLogout,
       callback);
 };
 
@@ -302,8 +382,30 @@ proto.access.SecurityPromiseClient.prototype.runLogout =
       '/access.Security/RunLogout',
       request,
       metadata || {},
-      methodInfo_Security_RunLogout);
+      methodDescriptor_Security_RunLogout);
 };
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.access.UserInfoRequest,
+ *   !proto.access.UserInfoValue>}
+ */
+const methodDescriptor_Security_GetUserInfoFromSession = new grpc.web.MethodDescriptor(
+  '/access.Security/GetUserInfoFromSession',
+  grpc.web.MethodType.UNARY,
+  proto.access.UserInfoRequest,
+  proto.access.UserInfoValue,
+  /**
+   * @param {!proto.access.UserInfoRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.UserInfoValue.deserializeBinary
+);
 
 
 /**
@@ -314,7 +416,10 @@ proto.access.SecurityPromiseClient.prototype.runLogout =
  */
 const methodInfo_Security_GetUserInfoFromSession = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.UserInfoValue,
-  /** @param {!proto.access.UserInfoRequest} request */
+  /**
+   * @param {!proto.access.UserInfoRequest} request
+   * @return {!Uint8Array}
+   */
   function(request) {
     return request.serializeBinary();
   },
@@ -338,7 +443,7 @@ proto.access.SecurityClient.prototype.getUserInfoFromSession =
       '/access.Security/GetUserInfoFromSession',
       request,
       metadata || {},
-      methodInfo_Security_GetUserInfoFromSession,
+      methodDescriptor_Security_GetUserInfoFromSession,
       callback);
 };
 
@@ -357,8 +462,30 @@ proto.access.SecurityPromiseClient.prototype.getUserInfoFromSession =
       '/access.Security/GetUserInfoFromSession',
       request,
       metadata || {},
-      methodInfo_Security_GetUserInfoFromSession);
+      methodDescriptor_Security_GetUserInfoFromSession);
 };
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.access.UserInfoRequest,
+ *   !proto.access.Menu>}
+ */
+const methodDescriptor_Security_GetMenuAndChild = new grpc.web.MethodDescriptor(
+  '/access.Security/GetMenuAndChild',
+  grpc.web.MethodType.UNARY,
+  proto.access.UserInfoRequest,
+  proto.access.Menu,
+  /**
+   * @param {!proto.access.UserInfoRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Menu.deserializeBinary
+);
 
 
 /**
@@ -369,7 +496,10 @@ proto.access.SecurityPromiseClient.prototype.getUserInfoFromSession =
  */
 const methodInfo_Security_GetMenuAndChild = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Menu,
-  /** @param {!proto.access.UserInfoRequest} request */
+  /**
+   * @param {!proto.access.UserInfoRequest} request
+   * @return {!Uint8Array}
+   */
   function(request) {
     return request.serializeBinary();
   },
@@ -393,7 +523,7 @@ proto.access.SecurityClient.prototype.getMenuAndChild =
       '/access.Security/GetMenuAndChild',
       request,
       metadata || {},
-      methodInfo_Security_GetMenuAndChild,
+      methodDescriptor_Security_GetMenuAndChild,
       callback);
 };
 
@@ -412,8 +542,30 @@ proto.access.SecurityPromiseClient.prototype.getMenuAndChild =
       '/access.Security/GetMenuAndChild',
       request,
       metadata || {},
-      methodInfo_Security_GetMenuAndChild);
+      methodDescriptor_Security_GetMenuAndChild);
 };
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.access.UserInfoRequest,
+ *   !proto.access.Session>}
+ */
+const methodDescriptor_Security_RunChangeRole = new grpc.web.MethodDescriptor(
+  '/access.Security/RunChangeRole',
+  grpc.web.MethodType.UNARY,
+  proto.access.UserInfoRequest,
+  proto.access.Session,
+  /**
+   * @param {!proto.access.UserInfoRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Session.deserializeBinary
+);
 
 
 /**
@@ -424,7 +576,10 @@ proto.access.SecurityPromiseClient.prototype.getMenuAndChild =
  */
 const methodInfo_Security_RunChangeRole = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
-  /** @param {!proto.access.UserInfoRequest} request */
+  /**
+   * @param {!proto.access.UserInfoRequest} request
+   * @return {!Uint8Array}
+   */
   function(request) {
     return request.serializeBinary();
   },
@@ -448,7 +603,7 @@ proto.access.SecurityClient.prototype.runChangeRole =
       '/access.Security/RunChangeRole',
       request,
       metadata || {},
-      methodInfo_Security_RunChangeRole,
+      methodDescriptor_Security_RunChangeRole,
       callback);
 };
 
@@ -467,8 +622,30 @@ proto.access.SecurityPromiseClient.prototype.runChangeRole =
       '/access.Security/RunChangeRole',
       request,
       metadata || {},
-      methodInfo_Security_RunChangeRole);
+      methodDescriptor_Security_RunChangeRole);
 };
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.access.SessionRequest,
+ *   !proto.access.Session>}
+ */
+const methodDescriptor_Security_GetSession = new grpc.web.MethodDescriptor(
+  '/access.Security/GetSession',
+  grpc.web.MethodType.UNARY,
+  proto.access.SessionRequest,
+  proto.access.Session,
+  /**
+   * @param {!proto.access.SessionRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.access.Session.deserializeBinary
+);
 
 
 /**
@@ -479,7 +656,10 @@ proto.access.SecurityPromiseClient.prototype.runChangeRole =
  */
 const methodInfo_Security_GetSession = new grpc.web.AbstractClientBase.MethodInfo(
   proto.access.Session,
-  /** @param {!proto.access.SessionRequest} request */
+  /**
+   * @param {!proto.access.SessionRequest} request
+   * @return {!Uint8Array}
+   */
   function(request) {
     return request.serializeBinary();
   },
@@ -503,7 +683,7 @@ proto.access.SecurityClient.prototype.getSession =
       '/access.Security/GetSession',
       request,
       metadata || {},
-      methodInfo_Security_GetSession,
+      methodDescriptor_Security_GetSession,
       callback);
 };
 
@@ -522,7 +702,7 @@ proto.access.SecurityPromiseClient.prototype.getSession =
       '/access.Security/GetSession',
       request,
       metadata || {},
-      methodInfo_Security_GetSession);
+      methodDescriptor_Security_GetSession);
 };
 
 

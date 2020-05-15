@@ -1,3 +1,4 @@
+// source: proto/access.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -536,9 +537,12 @@ proto.access.LoginRequest.prototype.getUsername = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LoginRequest} returns this
+ */
 proto.access.LoginRequest.prototype.setUsername = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -551,9 +555,12 @@ proto.access.LoginRequest.prototype.getUserpass = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LoginRequest} returns this
+ */
 proto.access.LoginRequest.prototype.setUserpass = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -566,9 +573,12 @@ proto.access.LoginRequest.prototype.getRoleuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LoginRequest} returns this
+ */
 proto.access.LoginRequest.prototype.setRoleuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -581,9 +591,12 @@ proto.access.LoginRequest.prototype.getOrganizationuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LoginRequest} returns this
+ */
 proto.access.LoginRequest.prototype.setOrganizationuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -596,9 +609,12 @@ proto.access.LoginRequest.prototype.getWarehouseuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LoginRequest} returns this
+ */
 proto.access.LoginRequest.prototype.setWarehouseuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value);
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -611,9 +627,12 @@ proto.access.LoginRequest.prototype.getClientversion = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LoginRequest} returns this
+ */
 proto.access.LoginRequest.prototype.setClientversion = function(value) {
-  jspb.Message.setProto3StringField(this, 7, value);
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
@@ -626,9 +645,12 @@ proto.access.LoginRequest.prototype.getLanguage = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LoginRequest} returns this
+ */
 proto.access.LoginRequest.prototype.setLanguage = function(value) {
-  jspb.Message.setProto3StringField(this, 8, value);
+  return jspb.Message.setProto3StringField(this, 8, value);
 };
 
 
@@ -777,9 +799,12 @@ proto.access.LogoutRequest.prototype.getSessionuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LogoutRequest} returns this
+ */
 proto.access.LogoutRequest.prototype.setSessionuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -792,9 +817,12 @@ proto.access.LogoutRequest.prototype.getLanguage = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LogoutRequest} returns this
+ */
 proto.access.LogoutRequest.prototype.setLanguage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -807,9 +835,12 @@ proto.access.LogoutRequest.prototype.getClientversion = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.LogoutRequest} returns this
+ */
 proto.access.LogoutRequest.prototype.setClientversion = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -946,9 +977,12 @@ proto.access.SessionRequest.prototype.getSessionuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.SessionRequest} returns this
+ */
 proto.access.SessionRequest.prototype.setSessionuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -961,9 +995,12 @@ proto.access.SessionRequest.prototype.getClientversion = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.SessionRequest} returns this
+ */
 proto.access.SessionRequest.prototype.setClientversion = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1148,9 +1185,12 @@ proto.access.ChangeRoleRequest.prototype.getSessionuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ChangeRoleRequest} returns this
+ */
 proto.access.ChangeRoleRequest.prototype.setSessionuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1163,9 +1203,12 @@ proto.access.ChangeRoleRequest.prototype.getRoleuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ChangeRoleRequest} returns this
+ */
 proto.access.ChangeRoleRequest.prototype.setRoleuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1178,9 +1221,12 @@ proto.access.ChangeRoleRequest.prototype.getOrganizationuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ChangeRoleRequest} returns this
+ */
 proto.access.ChangeRoleRequest.prototype.setOrganizationuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -1193,9 +1239,12 @@ proto.access.ChangeRoleRequest.prototype.getWarehouseuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ChangeRoleRequest} returns this
+ */
 proto.access.ChangeRoleRequest.prototype.setWarehouseuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -1208,9 +1257,12 @@ proto.access.ChangeRoleRequest.prototype.getLanguage = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ChangeRoleRequest} returns this
+ */
 proto.access.ChangeRoleRequest.prototype.setLanguage = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -1223,9 +1275,12 @@ proto.access.ChangeRoleRequest.prototype.getClientversion = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ChangeRoleRequest} returns this
+ */
 proto.access.ChangeRoleRequest.prototype.setClientversion = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value);
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -1410,9 +1465,12 @@ proto.access.UserInfoRequest.prototype.getSessionuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfoRequest} returns this
+ */
 proto.access.UserInfoRequest.prototype.setSessionuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1425,9 +1483,12 @@ proto.access.UserInfoRequest.prototype.getRoleuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfoRequest} returns this
+ */
 proto.access.UserInfoRequest.prototype.setRoleuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1440,9 +1501,12 @@ proto.access.UserInfoRequest.prototype.getOrganizationuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfoRequest} returns this
+ */
 proto.access.UserInfoRequest.prototype.setOrganizationuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -1455,9 +1519,12 @@ proto.access.UserInfoRequest.prototype.getWarehouseuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfoRequest} returns this
+ */
 proto.access.UserInfoRequest.prototype.setWarehouseuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -1470,9 +1537,12 @@ proto.access.UserInfoRequest.prototype.getLanguage = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfoRequest} returns this
+ */
 proto.access.UserInfoRequest.prototype.setLanguage = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -1485,9 +1555,12 @@ proto.access.UserInfoRequest.prototype.getClientversion = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfoRequest} returns this
+ */
 proto.access.UserInfoRequest.prototype.setClientversion = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value);
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -1637,17 +1710,21 @@ proto.access.UserInfoValue.prototype.getUserinfo = function() {
 };
 
 
-/** @param {?proto.access.UserInfo|undefined} value */
+/**
+ * @param {?proto.access.UserInfo|undefined} value
+ * @return {!proto.access.UserInfoValue} returns this
+*/
 proto.access.UserInfoValue.prototype.setUserinfo = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+  return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
+ * @return {!proto.access.UserInfoValue} returns this
  */
 proto.access.UserInfoValue.prototype.clearUserinfo = function() {
-  this.setUserinfo(undefined);
+  return this.setUserinfo(undefined);
 };
 
 
@@ -1670,9 +1747,12 @@ proto.access.UserInfoValue.prototype.getRolesList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Role>} value */
+/**
+ * @param {!Array<!proto.access.Role>} value
+ * @return {!proto.access.UserInfoValue} returns this
+*/
 proto.access.UserInfoValue.prototype.setRolesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 2, value);
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
@@ -1688,9 +1768,10 @@ proto.access.UserInfoValue.prototype.addRoles = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.UserInfoValue} returns this
  */
 proto.access.UserInfoValue.prototype.clearRolesList = function() {
-  this.setRolesList([]);
+  return this.setRolesList([]);
 };
 
 
@@ -1863,9 +1944,12 @@ proto.access.UserInfo.prototype.getId = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.UserInfo} returns this
+ */
 proto.access.UserInfo.prototype.setId = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -1878,9 +1962,12 @@ proto.access.UserInfo.prototype.getUuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfo} returns this
+ */
 proto.access.UserInfo.prototype.setUuid = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1893,9 +1980,12 @@ proto.access.UserInfo.prototype.getName = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfo} returns this
+ */
 proto.access.UserInfo.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -1908,9 +1998,12 @@ proto.access.UserInfo.prototype.getDescription = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfo} returns this
+ */
 proto.access.UserInfo.prototype.setDescription = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -1923,9 +2016,12 @@ proto.access.UserInfo.prototype.getComments = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.UserInfo} returns this
+ */
 proto.access.UserInfo.prototype.setComments = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -2033,7 +2129,7 @@ proto.access.Session.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = msg.getDefaultcontextMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.access.ContextValue.deserializeBinaryFromReader, "");
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.access.ContextValue.deserializeBinaryFromReader, "", new proto.access.ContextValue());
          });
       break;
     default:
@@ -2125,9 +2221,12 @@ proto.access.Session.prototype.getId = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.Session} returns this
+ */
 proto.access.Session.prototype.setId = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -2140,9 +2239,12 @@ proto.access.Session.prototype.getUuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Session} returns this
+ */
 proto.access.Session.prototype.setUuid = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -2155,9 +2257,12 @@ proto.access.Session.prototype.getName = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Session} returns this
+ */
 proto.access.Session.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -2171,17 +2276,21 @@ proto.access.Session.prototype.getUserinfo = function() {
 };
 
 
-/** @param {?proto.access.UserInfo|undefined} value */
+/**
+ * @param {?proto.access.UserInfo|undefined} value
+ * @return {!proto.access.Session} returns this
+*/
 proto.access.Session.prototype.setUserinfo = function(value) {
-  jspb.Message.setWrapperField(this, 4, value);
+  return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
+ * @return {!proto.access.Session} returns this
  */
 proto.access.Session.prototype.clearUserinfo = function() {
-  this.setUserinfo(undefined);
+  return this.setUserinfo(undefined);
 };
 
 
@@ -2204,17 +2313,21 @@ proto.access.Session.prototype.getRole = function() {
 };
 
 
-/** @param {?proto.access.Role|undefined} value */
+/**
+ * @param {?proto.access.Role|undefined} value
+ * @return {!proto.access.Session} returns this
+*/
 proto.access.Session.prototype.setRole = function(value) {
-  jspb.Message.setWrapperField(this, 5, value);
+  return jspb.Message.setWrapperField(this, 5, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
+ * @return {!proto.access.Session} returns this
  */
 proto.access.Session.prototype.clearRole = function() {
-  this.setRole(undefined);
+  return this.setRole(undefined);
 };
 
 
@@ -2236,9 +2349,12 @@ proto.access.Session.prototype.getProcessed = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Session} returns this
+ */
 proto.access.Session.prototype.setProcessed = function(value) {
-  jspb.Message.setProto3BooleanField(this, 6, value);
+  return jspb.Message.setProto3BooleanField(this, 6, value);
 };
 
 
@@ -2257,10 +2373,11 @@ proto.access.Session.prototype.getDefaultcontextMap = function(opt_noLazyCreate)
 
 /**
  * Clears values from the map. The map will be non-null.
+ * @return {!proto.access.Session} returns this
  */
 proto.access.Session.prototype.clearDefaultcontextMap = function() {
   this.getDefaultcontextMap().clear();
-};
+  return this;};
 
 
 
@@ -2457,9 +2574,12 @@ proto.access.ContextValue.prototype.getIntvalue = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.ContextValue} returns this
+ */
 proto.access.ContextValue.prototype.setIntvalue = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -2472,9 +2592,12 @@ proto.access.ContextValue.prototype.getLongvalue = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.ContextValue} returns this
+ */
 proto.access.ContextValue.prototype.setLongvalue = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -2487,9 +2610,12 @@ proto.access.ContextValue.prototype.getDoublevalue = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.ContextValue} returns this
+ */
 proto.access.ContextValue.prototype.setDoublevalue = function(value) {
-  jspb.Message.setProto3FloatField(this, 3, value);
+  return jspb.Message.setProto3FloatField(this, 3, value);
 };
 
 
@@ -2502,9 +2628,12 @@ proto.access.ContextValue.prototype.getBooleanvalue = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.ContextValue} returns this
+ */
 proto.access.ContextValue.prototype.setBooleanvalue = function(value) {
-  jspb.Message.setProto3BooleanField(this, 4, value);
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 
@@ -2517,9 +2646,12 @@ proto.access.ContextValue.prototype.getStringvalue = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ContextValue} returns this
+ */
 proto.access.ContextValue.prototype.setStringvalue = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -2532,9 +2664,12 @@ proto.access.ContextValue.prototype.getValuetype = function() {
 };
 
 
-/** @param {!proto.access.ContextValue.ValueType} value */
+/**
+ * @param {!proto.access.ContextValue.ValueType} value
+ * @return {!proto.access.ContextValue} returns this
+ */
 proto.access.ContextValue.prototype.setValuetype = function(value) {
-  jspb.Message.setProto3EnumField(this, 6, value);
+  return jspb.Message.setProto3EnumField(this, 6, value);
 };
 
 
@@ -2954,9 +3089,12 @@ proto.access.Role.prototype.getId = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setId = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -2969,9 +3107,12 @@ proto.access.Role.prototype.getUuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setUuid = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -2984,9 +3125,12 @@ proto.access.Role.prototype.getName = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -2999,9 +3143,12 @@ proto.access.Role.prototype.getDescription = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setDescription = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -3014,9 +3161,12 @@ proto.access.Role.prototype.getClientid = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setClientid = function(value) {
-  jspb.Message.setProto3IntField(this, 5, value);
+  return jspb.Message.setProto3IntField(this, 5, value);
 };
 
 
@@ -3029,9 +3179,12 @@ proto.access.Role.prototype.getClientname = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setClientname = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value);
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -3044,9 +3197,12 @@ proto.access.Role.prototype.getIscanreport = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setIscanreport = function(value) {
-  jspb.Message.setProto3BooleanField(this, 7, value);
+  return jspb.Message.setProto3BooleanField(this, 7, value);
 };
 
 
@@ -3059,9 +3215,12 @@ proto.access.Role.prototype.getIscanexport = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setIscanexport = function(value) {
-  jspb.Message.setProto3BooleanField(this, 8, value);
+  return jspb.Message.setProto3BooleanField(this, 8, value);
 };
 
 
@@ -3074,9 +3233,12 @@ proto.access.Role.prototype.getIspersonallock = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setIspersonallock = function(value) {
-  jspb.Message.setProto3BooleanField(this, 9, value);
+  return jspb.Message.setProto3BooleanField(this, 9, value);
 };
 
 
@@ -3089,9 +3251,12 @@ proto.access.Role.prototype.getIspersonalaccess = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Role} returns this
+ */
 proto.access.Role.prototype.setIspersonalaccess = function(value) {
-  jspb.Message.setProto3BooleanField(this, 10, value);
+  return jspb.Message.setProto3BooleanField(this, 10, value);
 };
 
 
@@ -3105,9 +3270,12 @@ proto.access.Role.prototype.getOrganizationsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setOrganizationsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 11, value);
+  return jspb.Message.setRepeatedWrapperField(this, 11, value);
 };
 
 
@@ -3123,9 +3291,10 @@ proto.access.Role.prototype.addOrganizations = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearOrganizationsList = function() {
-  this.setOrganizationsList([]);
+  return this.setOrganizationsList([]);
 };
 
 
@@ -3139,9 +3308,12 @@ proto.access.Role.prototype.getWindowsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setWindowsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 12, value);
+  return jspb.Message.setRepeatedWrapperField(this, 12, value);
 };
 
 
@@ -3157,9 +3329,10 @@ proto.access.Role.prototype.addWindows = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearWindowsList = function() {
-  this.setWindowsList([]);
+  return this.setWindowsList([]);
 };
 
 
@@ -3173,9 +3346,12 @@ proto.access.Role.prototype.getProcessList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setProcessList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 13, value);
+  return jspb.Message.setRepeatedWrapperField(this, 13, value);
 };
 
 
@@ -3191,9 +3367,10 @@ proto.access.Role.prototype.addProcess = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearProcessList = function() {
-  this.setProcessList([]);
+  return this.setProcessList([]);
 };
 
 
@@ -3207,9 +3384,12 @@ proto.access.Role.prototype.getFormsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setFormsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 14, value);
+  return jspb.Message.setRepeatedWrapperField(this, 14, value);
 };
 
 
@@ -3225,9 +3405,10 @@ proto.access.Role.prototype.addForms = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearFormsList = function() {
-  this.setFormsList([]);
+  return this.setFormsList([]);
 };
 
 
@@ -3241,9 +3422,12 @@ proto.access.Role.prototype.getBrowsersList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setBrowsersList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 15, value);
+  return jspb.Message.setRepeatedWrapperField(this, 15, value);
 };
 
 
@@ -3259,9 +3443,10 @@ proto.access.Role.prototype.addBrowsers = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearBrowsersList = function() {
-  this.setBrowsersList([]);
+  return this.setBrowsersList([]);
 };
 
 
@@ -3275,9 +3460,12 @@ proto.access.Role.prototype.getWorkflowsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setWorkflowsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 16, value);
+  return jspb.Message.setRepeatedWrapperField(this, 16, value);
 };
 
 
@@ -3293,9 +3481,10 @@ proto.access.Role.prototype.addWorkflows = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearWorkflowsList = function() {
-  this.setWorkflowsList([]);
+  return this.setWorkflowsList([]);
 };
 
 
@@ -3309,9 +3498,12 @@ proto.access.Role.prototype.getTasksList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setTasksList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 17, value);
+  return jspb.Message.setRepeatedWrapperField(this, 17, value);
 };
 
 
@@ -3327,9 +3519,10 @@ proto.access.Role.prototype.addTasks = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearTasksList = function() {
-  this.setTasksList([]);
+  return this.setTasksList([]);
 };
 
 
@@ -3343,9 +3536,12 @@ proto.access.Role.prototype.getDashboardsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setDashboardsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 18, value);
+  return jspb.Message.setRepeatedWrapperField(this, 18, value);
 };
 
 
@@ -3361,9 +3557,10 @@ proto.access.Role.prototype.addDashboards = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearDashboardsList = function() {
-  this.setDashboardsList([]);
+  return this.setDashboardsList([]);
 };
 
 
@@ -3377,9 +3574,12 @@ proto.access.Role.prototype.getDocumentactionsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Access>} value */
+/**
+ * @param {!Array<!proto.access.Access>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setDocumentactionsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 19, value);
+  return jspb.Message.setRepeatedWrapperField(this, 19, value);
 };
 
 
@@ -3395,9 +3595,10 @@ proto.access.Role.prototype.addDocumentactions = function(opt_value, opt_index) 
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearDocumentactionsList = function() {
-  this.setDocumentactionsList([]);
+  return this.setDocumentactionsList([]);
 };
 
 
@@ -3411,9 +3612,12 @@ proto.access.Role.prototype.getTablesList = function() {
 };
 
 
-/** @param {!Array<!proto.access.TableAccess>} value */
+/**
+ * @param {!Array<!proto.access.TableAccess>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setTablesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 20, value);
+  return jspb.Message.setRepeatedWrapperField(this, 20, value);
 };
 
 
@@ -3429,9 +3633,10 @@ proto.access.Role.prototype.addTables = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearTablesList = function() {
-  this.setTablesList([]);
+  return this.setTablesList([]);
 };
 
 
@@ -3445,9 +3650,12 @@ proto.access.Role.prototype.getColumnsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.ColumnAccess>} value */
+/**
+ * @param {!Array<!proto.access.ColumnAccess>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setColumnsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 21, value);
+  return jspb.Message.setRepeatedWrapperField(this, 21, value);
 };
 
 
@@ -3463,9 +3671,10 @@ proto.access.Role.prototype.addColumns = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearColumnsList = function() {
-  this.setColumnsList([]);
+  return this.setColumnsList([]);
 };
 
 
@@ -3479,9 +3688,12 @@ proto.access.Role.prototype.getRecordsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.RecordAccess>} value */
+/**
+ * @param {!Array<!proto.access.RecordAccess>} value
+ * @return {!proto.access.Role} returns this
+*/
 proto.access.Role.prototype.setRecordsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 22, value);
+  return jspb.Message.setRepeatedWrapperField(this, 22, value);
 };
 
 
@@ -3497,9 +3709,10 @@ proto.access.Role.prototype.addRecords = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Role} returns this
  */
 proto.access.Role.prototype.clearRecordsList = function() {
-  this.setRecordsList([]);
+  return this.setRecordsList([]);
 };
 
 
@@ -3648,9 +3861,12 @@ proto.access.Access.prototype.getUuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Access} returns this
+ */
 proto.access.Access.prototype.setUuid = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -3663,9 +3879,12 @@ proto.access.Access.prototype.getIsreadonly = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Access} returns this
+ */
 proto.access.Access.prototype.setIsreadonly = function(value) {
-  jspb.Message.setProto3BooleanField(this, 2, value);
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
@@ -3678,9 +3897,12 @@ proto.access.Access.prototype.getAction = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Access} returns this
+ */
 proto.access.Access.prototype.setAction = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -3862,9 +4084,12 @@ proto.access.TableAccess.prototype.getTablename = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.TableAccess} returns this
+ */
 proto.access.TableAccess.prototype.setTablename = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -3877,9 +4102,12 @@ proto.access.TableAccess.prototype.getIsexclude = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.TableAccess} returns this
+ */
 proto.access.TableAccess.prototype.setIsexclude = function(value) {
-  jspb.Message.setProto3BooleanField(this, 2, value);
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
@@ -3892,9 +4120,12 @@ proto.access.TableAccess.prototype.getIscanreport = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.TableAccess} returns this
+ */
 proto.access.TableAccess.prototype.setIscanreport = function(value) {
-  jspb.Message.setProto3BooleanField(this, 3, value);
+  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
@@ -3907,9 +4138,12 @@ proto.access.TableAccess.prototype.getIscanexport = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.TableAccess} returns this
+ */
 proto.access.TableAccess.prototype.setIscanexport = function(value) {
-  jspb.Message.setProto3BooleanField(this, 4, value);
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 
@@ -3922,9 +4156,12 @@ proto.access.TableAccess.prototype.getAccesstyperules = function() {
 };
 
 
-/** @param {!proto.access.TableAccess.AccessTypeRule} value */
+/**
+ * @param {!proto.access.TableAccess.AccessTypeRule} value
+ * @return {!proto.access.TableAccess} returns this
+ */
 proto.access.TableAccess.prototype.setAccesstyperules = function(value) {
-  jspb.Message.setProto3EnumField(this, 5, value);
+  return jspb.Message.setProto3EnumField(this, 5, value);
 };
 
 
@@ -4085,9 +4322,12 @@ proto.access.ColumnAccess.prototype.getTablename = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ColumnAccess} returns this
+ */
 proto.access.ColumnAccess.prototype.setTablename = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -4100,9 +4340,12 @@ proto.access.ColumnAccess.prototype.getColumnname = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.ColumnAccess} returns this
+ */
 proto.access.ColumnAccess.prototype.setColumnname = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -4115,9 +4358,12 @@ proto.access.ColumnAccess.prototype.getIsexclude = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.ColumnAccess} returns this
+ */
 proto.access.ColumnAccess.prototype.setIsexclude = function(value) {
-  jspb.Message.setProto3BooleanField(this, 3, value);
+  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
@@ -4130,9 +4376,12 @@ proto.access.ColumnAccess.prototype.getIsreadonly = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.ColumnAccess} returns this
+ */
 proto.access.ColumnAccess.prototype.setIsreadonly = function(value) {
-  jspb.Message.setProto3BooleanField(this, 4, value);
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 
@@ -4317,9 +4566,12 @@ proto.access.RecordAccess.prototype.getTablename = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.RecordAccess} returns this
+ */
 proto.access.RecordAccess.prototype.setTablename = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -4332,9 +4584,12 @@ proto.access.RecordAccess.prototype.getRecordid = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.RecordAccess} returns this
+ */
 proto.access.RecordAccess.prototype.setRecordid = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -4347,9 +4602,12 @@ proto.access.RecordAccess.prototype.getRecorduuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.RecordAccess} returns this
+ */
 proto.access.RecordAccess.prototype.setRecorduuid = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -4362,9 +4620,12 @@ proto.access.RecordAccess.prototype.getIsexclude = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.RecordAccess} returns this
+ */
 proto.access.RecordAccess.prototype.setIsexclude = function(value) {
-  jspb.Message.setProto3BooleanField(this, 4, value);
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 
@@ -4377,9 +4638,12 @@ proto.access.RecordAccess.prototype.getIsreadonly = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.RecordAccess} returns this
+ */
 proto.access.RecordAccess.prototype.setIsreadonly = function(value) {
-  jspb.Message.setProto3BooleanField(this, 5, value);
+  return jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
 
@@ -4392,9 +4656,12 @@ proto.access.RecordAccess.prototype.getIsdependententities = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.RecordAccess} returns this
+ */
 proto.access.RecordAccess.prototype.setIsdependententities = function(value) {
-  jspb.Message.setProto3BooleanField(this, 6, value);
+  return jspb.Message.setProto3BooleanField(this, 6, value);
 };
 
 
@@ -4673,9 +4940,12 @@ proto.access.Menu.prototype.getId = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setId = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -4688,9 +4958,12 @@ proto.access.Menu.prototype.getUuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setUuid = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -4703,9 +4976,12 @@ proto.access.Menu.prototype.getParentuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setParentuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -4718,9 +4994,12 @@ proto.access.Menu.prototype.getName = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -4733,9 +5012,12 @@ proto.access.Menu.prototype.getDescription = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setDescription = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value);
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -4748,9 +5030,12 @@ proto.access.Menu.prototype.getSequence = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setSequence = function(value) {
-  jspb.Message.setProto3StringField(this, 7, value);
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
@@ -4763,9 +5048,12 @@ proto.access.Menu.prototype.getIsreadonly = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setIsreadonly = function(value) {
-  jspb.Message.setProto3BooleanField(this, 8, value);
+  return jspb.Message.setProto3BooleanField(this, 8, value);
 };
 
 
@@ -4778,9 +5066,12 @@ proto.access.Menu.prototype.getIssummary = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setIssummary = function(value) {
-  jspb.Message.setProto3BooleanField(this, 9, value);
+  return jspb.Message.setProto3BooleanField(this, 9, value);
 };
 
 
@@ -4793,9 +5084,12 @@ proto.access.Menu.prototype.getIssotrx = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setIssotrx = function(value) {
-  jspb.Message.setProto3BooleanField(this, 10, value);
+  return jspb.Message.setProto3BooleanField(this, 10, value);
 };
 
 
@@ -4808,9 +5102,12 @@ proto.access.Menu.prototype.getAction = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setAction = function(value) {
-  jspb.Message.setProto3StringField(this, 11, value);
+  return jspb.Message.setProto3StringField(this, 11, value);
 };
 
 
@@ -4823,9 +5120,12 @@ proto.access.Menu.prototype.getReferenceuuid = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setReferenceuuid = function(value) {
-  jspb.Message.setProto3StringField(this, 12, value);
+  return jspb.Message.setProto3StringField(this, 12, value);
 };
 
 
@@ -4839,9 +5139,12 @@ proto.access.Menu.prototype.getChildsList = function() {
 };
 
 
-/** @param {!Array<!proto.access.Menu>} value */
+/**
+ * @param {!Array<!proto.access.Menu>} value
+ * @return {!proto.access.Menu} returns this
+*/
 proto.access.Menu.prototype.setChildsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 13, value);
+  return jspb.Message.setRepeatedWrapperField(this, 13, value);
 };
 
 
@@ -4857,9 +5160,10 @@ proto.access.Menu.prototype.addChilds = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.access.Menu} returns this
  */
 proto.access.Menu.prototype.clearChildsList = function() {
-  this.setChildsList([]);
+  return this.setChildsList([]);
 };
 
 
@@ -4872,9 +5176,12 @@ proto.access.Menu.prototype.getIsactive = function() {
 };
 
 
-/** @param {boolean} value */
+/**
+ * @param {boolean} value
+ * @return {!proto.access.Menu} returns this
+ */
 proto.access.Menu.prototype.setIsactive = function(value) {
-  jspb.Message.setProto3BooleanField(this, 14, value);
+  return jspb.Message.setProto3BooleanField(this, 14, value);
 };
 
 
