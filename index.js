@@ -194,13 +194,18 @@ class Access {
   /**
    * get User Menu
    * @param {string} sessionUuid Session
+   * @param {string} roleUuid uuid role
+   * @param {string} organizationUuid uuid role
+   * @param {string} warehouseUuid uuid warehouseUuid
    * @return {UserInfoValue} User Info Value
    */
-  requestUserMenuFromSession(sessionUuid) {
+  requestUserMenuFromSession({ sessionUuid, roleUuid, organizationUuid, warehouseUuid }) {
     const { UserInfoRequest } = require('./src/grpc/proto/access_pb.js');
     const request = new UserInfoRequest();
-
     request.setSessionuuid(sessionUuid);
+    request.setRoleuuid(roleUuid);
+    request.setOrganizationuuid(organizationUuid);
+    request.setWarehouseuuid(warehouseUuid);
     request.setClientversion(this.version);
     request.setLanguage(this.language);
 
